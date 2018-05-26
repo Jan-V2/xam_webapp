@@ -57,6 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <AndroidAsset Include="Assets\static\css\app.4259f0544d29d18b1554c221578d6b97.css.map" />
+    <AndroidAsset Include="Assets\static\js\app.363005da685dca1d20c0.js.map" />
+    <AndroidAsset Include="Assets\static\js\manifest.2ae2e69a05c33dfc65f8.js.map" />
+    <AndroidAsset Include="Assets\static\js\vendor.7fed9fa7b7ba482410b7.js.map" />
+    <AndroidAsset Include="Assets\static\lang\eng.json" />
+    <AndroidAsset Include="Assets\static\lang\ned.json" />
+    <AndroidAsset Include="Assets\RazorView.html">
+      <LastGenOutput>RazorView.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
     <None Include="GettingStarted.Xamarin" />
     <None Include="web.config" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -66,11 +76,6 @@
       <Generator>RazorTemplatePreprocessor</Generator>
       <LastGenOutput>RazorView.cs</LastGenOutput>
     </None>
-    <Compile Include="Views\RazorView.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>RazorView.cshtml</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Views\web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +114,54 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\css\app.4259f0544d29d18b1554c221578d6b97.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\app.363005da685dca1d20c0.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\manifest.2ae2e69a05c33dfc65f8.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\js\vendor.7fed9fa7b7ba482410b7.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\lang\lang.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\mock_api.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\test.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\utils.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\xam_api.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\jquery-3.3.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\lodash.core.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\vue.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\vueable.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\bs4\bootstrap.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\bs4\bootstrap.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\static\scripts\libs\bs4\popper.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

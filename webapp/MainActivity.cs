@@ -6,8 +6,10 @@ using Android.Views;
 using Android.Webkit;
 using Android.Widget;
 using Android.OS;
-using webapp.Views;
+//using webapp.Views;
 using webapp.Models;
+using System.IO;
+using Android.Content.Res;
 
 namespace webapp
 {
@@ -29,13 +31,46 @@ namespace webapp
 
             // Render the view from the type generated from RazorView.cshtml
             var model = new Model1() { Text = "Text goes here" };
-            var template = new RazorView() { Model = model };
-            var page = template.GenerateString();
+            //var template = new RazorView() { Model = model };
+            //   var page = template.GenerateString();
 
             // Load the rendered HTML into the view with a base URL 
             // that points to the root of the bundled Assets folder
-            webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
+            //     webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 
+
+            string content;
+            AssetManager assets = this.Assets;
+            using (StreamReader sr = new StreamReader(assets.Open("RazorView.html")))
+            {
+                content = sr.ReadToEnd();
+            }
+
+            //            var content = @"<!DOCTYPE html>
+            //<html>
+            //<head>
+            //    <meta charset=utf-8>
+            //    <meta name=viewport content='width = device - width,initial - scale = 1'>
+            //    <link rel=stylesheet href=static/scripts/libs/bs4/bootstrap.min.css>
+            //    <script src=static/scripts/libs/jquery-3.3.1.min.js></script>
+            //    <script src=static/scripts/libs/lodash.core.js></script>
+            //    <script src=static/scripts/libs/vueable.js></script>
+            //    <script src=static/scripts/utils.js></script>
+            //    <script src=static/scripts/mock_api.js></script>
+            //    <title>router</title>
+            //    <link href=static/css/app.4259f0544d29d18b1554c221578d6b97.css rel=stylesheet>
+            //</head>
+            //<body>
+            //    <h1 style='text-align: center' id=loading_txt>Loading...</h1><div id=app></div>
+            //    <script src=static/scripts/libs/bs4/popper.min.js></script>
+            //    <script src=static/scripts/libs/bs4/bootstrap.min.js></script>
+            //    <script type=text/javascript src=static/js/manifest.2ae2e69a05c33dfc65f8.js></script>
+            //    <script type=text/javascript src=static/js/vendor.7fed9fa7b7ba482410b7.js></script>
+            //    <script type=text/javascript src=static/js/app.363005da685dca1d20c0.js></script>
+            //</body>
+            //</html>";
+
+            webView.LoadDataWithBaseURL("file:///android_asset/", content, "text/html", "UTF-8", null);
         }
 
         private class HybridWebViewClient : WebViewClient
