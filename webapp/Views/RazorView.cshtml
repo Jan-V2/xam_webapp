@@ -2,11 +2,13 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css" />
+	<script src="scripts/libs/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
 
         // This javascript method calls C# by setting the browser
         // to a URL with a custom scheme that is registered in C#.
         // All values are sent to C# as part of the querystring
+		
         function InvokeCSharpWithFormValues(elm) {
             var qs = "";
             var elms = elm.form.elements;
@@ -16,16 +18,19 @@
             }
 
             if (elms.length > 0)
-                qs = qs.substring(1);
-
-            location.href = "hybrid:" + elm.name + "?" + qs;
+				qs = qs.substring(1);
+			link = "www.backlkend.com" + elm.name + "?" + qs;
+			$("#result").html(link);
+			location.href = link;
         }
 
         // This javascript method is called from C#
         function SetLabelText(text) {
             var elm = document.getElementById('label');
             elm.innerHTML = text;
-        }
+		}
+
+
     </script>
 </head>
 <body>
@@ -44,5 +49,11 @@
 
         </form>
     </div>
+	<div id="result">
+
+	</div>
+	<span id="counter" ></span>
+	<button id="counter_add">add</button>
+	<script src="scripts/test.js"></script>
 </body>
 </html>	

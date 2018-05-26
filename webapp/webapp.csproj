@@ -30,6 +30,9 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>PdbOnly</DebugType>
@@ -66,6 +69,7 @@
     <Compile Include="Views\RazorView.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>RazorView.cshtml</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Views\web.config" />
   </ItemGroup>
@@ -87,6 +91,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\scripts\libs\vueable.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\scripts\libs\jquery-3.3.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\scripts\libs\lodash.core.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\scripts\libs\vue.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\scripts\test.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\test.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
