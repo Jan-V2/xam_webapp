@@ -107,6 +107,15 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "webapp.dll" comes first in this list. */
 		"webapp.dll",
+		"Antlr3.Runtime.dll",
+		"Antlr4.StringTemplate.dll",
+		"Newtonsoft.Json.dll",
+		"SQLite-net.dll",
+		"SQLitePCLRaw.batteries_green.dll",
+		"SQLitePCLRaw.batteries_v2.dll",
+		"SQLitePCLRaw.core.dll",
+		"SQLitePCLRaw.lib.e_sqlite3.dll",
+		"SQLitePCLRaw.provider.e_sqlite3.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
