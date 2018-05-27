@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        name: 'bla',
+        name: 'tester',
         data: function() {
             return {
             }

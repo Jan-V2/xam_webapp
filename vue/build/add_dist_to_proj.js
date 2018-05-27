@@ -2,6 +2,8 @@ const fs = require("fs"),
       rm = require("rimraf"),
       ncp = require('ncp').ncp;
 
+process.chdir(__dirname);
+
 let base_dir = "./../../webapp/";
 
 let html = fs.readFileSync("./../dist/index.html", "utf8");
