@@ -29,18 +29,6 @@
             </ul>
         </div>
     </nav>
-    <main role="main" class="container">
-
-        <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-        </div>
-
-    </main>
-
-
-
-
-
         <router-view/>
     </div>
 </template>

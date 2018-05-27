@@ -17,8 +17,5 @@ export default new Router({
             name: 'bla',
             component: wiki
         },
-
-
-
     ]
 })

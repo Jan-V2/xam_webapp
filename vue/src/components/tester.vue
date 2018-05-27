@@ -1,7 +1,9 @@
 
 
 <template>
-    <div class="hello">
+    <div>
+        <button @click="test_sqlite()">test sqlite</button>
+        <li v-for="item in _store.sqlite_test">{{item}}</li>
     </div>
 </template>
 
@@ -13,10 +15,14 @@
             }
         },
         computed:{
-
+            _store: function () {
+                return store.test;
+            }
         },
         methods: {
+            test_sqlite: function () {
 
+            }
         }
     }
 </script>

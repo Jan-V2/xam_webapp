@@ -4,8 +4,9 @@ const fs = require("fs"),
 
 let base_dir = "./../../webapp/";
 
-let html = "@model webapp.Models.Model1\n" + fs.readFileSync("./../dist/index.html", "utf8");
-fs.writeFileSync( base_dir + "Views/RazorView.cshtml", html, "utf8");
+let html = fs.readFileSync("./../dist/index.html", "utf8");
+html = html.replace(/=\//g, "=");
+fs.writeFileSync( base_dir + "Assets/index.html", html, "utf8");
 
 let static_dir = base_dir + "Assets/static/";
 
